@@ -42,19 +42,23 @@ body{
     grid-auto-flow: row;
     width: 700px;
     height: 300px;
-    overflow: hidden;
+    overflow: visible;
     background-color: white;
 }
 .article-component__article-img{
-    background-color: red;
-    display: flex;
+/*     background-color: red;
+ */    display: flex;
     align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+    border-radius:   0.75em 0 0 0.75em;
 
 }
 .article-component__article-img>img{
     object-fit: cover;
     object-position: left;
     max-width: 100%;
+    overflow: hidden;
 }
 .article-component__article-img>img:hover{
 /*         object-fit: contain;
@@ -135,29 +139,27 @@ body{
     align-items: center;
     flex-direction: column;
     margin-left: auto;
+    display: flex;
+    background-color: var(--Light-Grayish-Blue);
+    align-self: center;
+    position: relative;
+    padding: 6px;
+}
+.share-btnContain{
     border-radius: 50%;
     background-color: var(--Light-Grayish-Blue);
-    display: flex;
-    padding:6px;
-    align-self: center;
+    padding: 6px;
 }
-.article-component__share-contain:hover{
-    background-color:hsl(217, 19%, 35%); 
+.share-btnContain:hover,
+.share-btnContain:active{
+    background-color: var(--Very-Dark-Graayish-Blue);
     cursor: pointer;
+}
+
+.share-btnContain:hover>img
+{
     filter: brightness(2);
-
 }
-.article-component__share-contain:hover>img{
-    filter: brightness(2);
-
-}
-/* .article-component__share-contain>img{
-
-}
-.article-component__share-contain>img:hover{
-    
-} */
-
 
 .social-media{
     background-color: var(--Very-Dark-Graayish-Blue);
@@ -170,7 +172,8 @@ body{
     align-items: center;
     width: 12em;
     position: absolute;
-    visibility: visible;
+    filter:opacity(0.95);
+    bottom: 50px;
 }
 .social-media::after{
     content: "";
@@ -189,8 +192,10 @@ body{
     color: var(--Grayish-Blue);
     letter-spacing: 5px;
 }
-@media screen and (max-width:375px){
+@media screen and (min-width:550){
+    .article-component{
 
+    }
 }
 @media screen and (max-width:1440px){
     
