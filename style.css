@@ -15,10 +15,7 @@
     --Grayish-Blue: hsl(212, 23%, 69%);
     --Light-Grayish-Blue: hsl(210, 46%, 95%);
 }
-/* - Very Dark Grayish Blue: hsl(217, 19%, 35%)
-- Desaturated Dark Blue: hsl(214, 17%, 51%)
-- Grayish Blue: hsl(212, 23%, 69%)
-- Light Grayish Blue: hsl(210, 46%, 95%) */
+
 body{
 /*     background-color: var(--lirycs-secondary);
  *//*     padding: 6em 3em 0 3em;
@@ -38,7 +35,7 @@ body{
     display: grid;
     box-shadow: 0 0 60px 10px var(--Grayish-Blue);    
     border-radius: 0.75em;
-    grid-template-columns: 35% minmax(min-content,65%);
+    grid-template-columns: 40% minmax(min-content,60%);
     grid-row: 100%;
 /*     grid-template-columns: minmax(min-content,35%) minmax(min-content,65%);
  */
@@ -78,13 +75,13 @@ body{
 .article-component__tittle{
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 21px;
     color: var(--Very-Dark-Graayish-Blue);
 }
 .article-component__body{
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--Desaturated-Dark-Blue);
 }
 
@@ -134,7 +131,63 @@ body{
     color: var(--Desaturated-Dark-Blue);
 }
 .article-component__share-contain{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin-left: auto;
+    border-radius: 50%;
+    background-color: var(--Light-Grayish-Blue);
+    display: flex;
+    padding:6px;
+    align-self: center;
+}
+.article-component__share-contain:hover{
+    background-color:hsl(217, 19%, 35%); 
+    cursor: pointer;
+    filter: brightness(2);
+
+}
+.article-component__share-contain:hover>img{
+    filter: brightness(2);
+
+}
+/* .article-component__share-contain>img{
+
+}
+.article-component__share-contain>img:hover{
+    
+} */
+
+
+.social-media{
+    background-color: var(--Very-Dark-Graayish-Blue);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1.25em 2em;
+    border-radius: 1em;
+    justify-content: space-around;
+    align-items: center;
+    width: 12em;
+    position: absolute;
+    visibility: visible;
+}
+.social-media::after{
+    content: "";
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--Very-Dark-Graayish-Blue); 
+    top: 3.75em;
+}
+
+
+.social-media__share-text{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--Grayish-Blue);
+    letter-spacing: 5px;
 }
 @media screen and (max-width:375px){
 
