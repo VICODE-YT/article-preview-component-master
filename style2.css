@@ -27,16 +27,17 @@ body{
     align-items: center;
     flex-wrap: wrap;
     height: 100vh;
-    background-color: cornflowerblue;
-}
+/*     background-color: cornflowerblue;
+ */}
 
 .article-component{
-    width: 80vw;
+    width: 20rem;
     height: 80vh;
     display: flex;
     flex-direction: column;
-    background-color: dodgerblue;
-    border-radius: 1em;
+/*     background-color: dodgerblue;
+ */    border-radius: 1em;
+    box-shadow: 0 0 60px 10px var(--Grayish-Blue);  
 }
 /* Top section (only img) */
 .article-component__img{
@@ -48,54 +49,61 @@ body{
 }
 /* the bottom section */
 .article-component__text-contain{
-    height: 60%;
-    max-height: 60%; 
-    padding: 1em;
-   
     display: flex;
+    max-height: 60%;
+    height: 60%;
     flex-direction: column;
-    justify-content: flex-start;
     flex-wrap: nowrap;
-
+/*     background-color: saddlebrown;
+ */    justify-content: space-between;
+    
 }
 /* tittle and body description */
 .text-contain__description-contain{
-    background-color: fuchsia;
-    height: 60%; 
+/*     background-color: fuchsia;
+ */    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin: 1.9em 1.5em 0em;
 
 }
 
 .description-contain__tittle{
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
-    font-size: 5vw;
+    font-size: 17px;
     color: var(--Very-Dark-Graayish-Blue);
 }
 
 .description-contain__body{
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
-    font-size: 3.5vw;
+    font-size: 15px;
+    margin-top: 1em;
     color: var(--Grayish-Blue);
 }
 
 /* Writer, date and share */
 .text-contain__info-contain{
     display: flex;
-    background-color: indigo;
-    flex-wrap: nowrap;
+/*     background-color: indigo;
+ */    flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
     max-height: 20%;
     justify-content: space-between;
-    margin-top: auto;
+    
+    margin: 1em 1.5em;
+
 }
 /* Pic Name date */
 .info-contain__author{
-    background-color: lightcoral;
-    height: 100%;
+/*     background-color: lightcoral;
+ */    height: 100%;
     display:flex;
-    width: 70%;
+    width: 80%;
     
 }
 .info-contain__author-avatar{
@@ -105,21 +113,23 @@ body{
 }
 /* Name date */
 .info-contain__info{
-    background-color: red;
     height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     margin-left: 1em;
+/*     background-color: purple;
+ */
 }   
 
 .info__author-name{
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--Very-Dark-Graayish-Blue);
-}
+/*     background-color: red;
+ */}
 
 .info__author__date{
     font-family: 'Manrope', sans-serif;
@@ -130,8 +140,8 @@ body{
 }
 
 .info-contain__share-contain{
-    background-color: lawngreen;
-/*     margin-left: auto;
+/*     background-color: lawngreen;
+ *//*     margin-left: auto;
  */
 }
 
